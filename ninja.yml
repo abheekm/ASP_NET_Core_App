@@ -12,16 +12,13 @@ settings:
   build-steps:
     - name: Build
       key: runner_cmd
-      workDir: 'client'
+      workDir: client
       disabled: false
       args:
         commands: dotnet build ASP_NET_Core_App.sln
   artifacts:
     - name: upload artifacts
-      condition: Only if build status is successful
+      condition: always
       paths:
-        - name: Sample
-          condition: 0
-          paths:
-            - wwwroot
-            - Pages
+        - wwwroot
+        - Pages
