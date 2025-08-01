@@ -21,4 +21,4 @@ settings:
       condition: always
       paths:
         - wwwroot
-        - Pages
+          Pages
