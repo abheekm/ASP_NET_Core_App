@@ -2,13 +2,6 @@ name: ASP_NET_Core_YML
 description: This is ASP_NET_Core_YML sample.
 version: 1.0
 settings:
-  vcs-steps:
-    - name: vcs
-      key: vcs_git
-      disabled: false
-      args:
-        url: https://github.com/abheekm/ASP_NET_Core_App.git
-        branch: master
   build-steps:
     - name: Build
       key: runner_cmd
@@ -20,5 +13,5 @@ settings:
     - name: upload artifacts
       condition: always
       paths:
-        - wwwroot
-          Pages
+        - client/wwwroot
+        - client/Pages
