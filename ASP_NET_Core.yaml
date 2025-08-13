@@ -1,0 +1,16 @@
+name: ASP_NET_Core_App_Public
+description: ""
+settings:
+  build-steps:
+  - key: runner_cmd
+    name: Build
+    disabled: false
+    workDir: ""
+    args:
+      commands: dotnet build ASP_NET_Core_App.sln
+    argsProtected: {}
+  artifacts:
+  - name: Sample
+    condition: buildSucceeds
+    paths:
+    - '*'
