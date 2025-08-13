@@ -5,7 +5,7 @@ settings:
   - key: runner_cmd
     name: Build
     disabled: false
-    workDir: ""
+    workDir: client
     args:
       commands: dotnet build ASP_NET_Core_App.sln
     argsProtected: {}
