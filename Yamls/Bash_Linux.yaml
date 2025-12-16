@@ -1,0 +1,85 @@
+name: Bash_Linux
+description: ""
+settings:
+  disableCache: false
+  vcs-steps: []
+  build-steps:
+  - key: runner_script
+    name: bash
+    disabled: false
+    workDir: ""
+    args:
+      Shell: bash
+      script: |-
+        #Hello CI
+        echo "CI test: Hello from Linux!"
+
+        #Linux Environment Info
+        echo "=== Linux Environment ==="
+        echo "User: $(whoami)"
+        echo "OS: $(lsb_release -d 2>/dev/null || uname -a)"
+        echo "Kernel: $(uname -r)"
+        echo "Current directory: $(pwd)"
+        echo "Disk usage:"
+        df -h
+
+        #File I/O
+        set -e
+
+        echo "Timestamp: $(date)" > linux_test.txt
+        cat linux_test.txt
+        rm linux_test.txt
+
+        #Parallel Tasks
+        set -e
+
+        for i in {1..4}; do
+          (echo "Task $i started"; sleep $((RANDOM % 3 + 1)); echo "Task $i done") &
+        done
+
+        wait
+        echo "All Linux tasks completed."
+
+        #Linux Network Test
+        echo "Pinging google.com ..."
+        ping -c 3 google.com
+
+        #CPU Stress Test (Linux-native)
+        echo "Running CPU stress for 5s..."
+        timeout 5s bash -c "while :; do :; done" || true
+        echo "Done."
+
+        #Linux CI Pipeline Simulation
+        set -e
+
+        echo "Installing packages..."
+        sleep 1
+
+        echo "Running unit tests..."
+        sleep 1
+        echo "test_login ..... ok"
+        echo "test_api ....... ok"
+
+        echo "Building artifact..."
+        echo "linux build artifact" > build_artifact.txt
+        ls -lh build_artifact.txt
+    argsProtected: {}
+  - key: runner_script
+    name: single
+    disabled: false
+    workDir: ""
+    args:
+      Shell: bash
+      script: 'echo "OS: $(lsb_release -d 2>/dev/null || uname -a)"'
+    argsProtected: {}
+  - key: runner_script
+    name: one liner
+    disabled: false
+    workDir: ""
+    args:
+      Shell: bash
+      script: set -e; for i in {1..4}; do (echo "Task $i started"; sleep $((RANDOM
+        % 3 + 1)); echo "Task $i done") & done; wait; echo "All Linux tasks completed."
+    argsProtected: {}
+  artifacts: []
+  variables: []
