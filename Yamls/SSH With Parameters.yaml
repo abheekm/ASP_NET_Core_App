@@ -1,0 +1,98 @@
+name: SSH With Parameters
+description: ""
+settings:
+  disableCache: false
+  vcs-steps: []
+  build-steps:
+  - key: runner_ssh
+    name: ssh password
+    disabled: false
+    workDir: ""
+    args:
+      authType: password
+      commands: |-
+        sudo whoami
+        hostname
+        uname -a
+        pwd
+        ls
+      host: '@{Host}'
+      port: 2222
+      user: '@{User}'
+    argsProtected:
+      passphrase: '#bn_protected#aYEDQShkticpYe2rclZwLbiTeswyuzp/yN+5wNpO2evDZzxK1cED4eP61rk+wi5ECQ=='
+      password: '#bn_protected#ujl0p1bcKk/V3vaPNHbXMDq4IKDz5P8C0z1Dmwr/P6+bVt/bNIIu'
+      rootPassword: '#bn_protected#9rx/EummAeuTA4vPj3yHN0eE9kYlnmJoZ81y+4rNOlxWj4pypKf2'
+      sshKey: '#bn_protected#HO6V4EanP4HiLTqmI/lr5tMAlXYwMg2jmBuQ0r2jgaUm9qt1khzhKSOWnuHaItoY13pBy3qTinNPF9GXR4vmBoFFUkmmN2NuRDBVmxIne8bJ56WWFi0AcEhxxqz39INdiT2VqsJzP9WHLDPC80ZPcDuHctzLJa66P0/okvfb4/jiF2FwpTcKUEW3mld+OP1OWqZKPR8GHhJ93VQ8Noev6lqxpguHV6tvQiGqPSjJKqZGIdbWLjaDnG7x/2Fum4STQnulVDczEixV2EiIbYApjhtra5xi5vVwG5sbZC3lM6Bf5kwnth/4mhXOEVZs4XIHtsMXYQVzZzs1FqrwVeO7FH4su03pZdwDnuy1Ig/XTHzBa9z6QYyolF7Rj2CGMiG3VnN1BmrZZ91tNsqAkjIVoBbXGNK/gkIHBigK+i+Zvbe46DLQ3ko/JoIaRuW2wb5lO32Pkf+3XYTETQjnWqgm/cXDk2zhl9Cjpo5cTyryJVi1tBFC+g0JHdmJ4nTW7CsfbjtETOqC4iPMf482hp7wm8VUncdqX4LZnHXQKvftt+z0ItlzOToDT9RtXc4Pp6O1Ni5t0IXUO97n6ciKwJXDKLmBKXxazdDuq+lpZ8z/v0vbQJMv7wXxjDzOcyBwlp6HjGizsxS802XNVIP3JHmdxcZ4'
+  - key: runner_ssh
+    name: ssh default
+    disabled: false
+    workDir: ""
+    args:
+      authType: defaultSshKey
+      commands: |-
+        sudo whoami
+        hostname
+        uname -a
+        pwd
+        ls
+      host: '@{Host}'
+      port: 2222
+      user: '@{User}'
+    argsProtected:
+      passphrase: '#bn_protected#JkYoQkrvpEUVTskHGKjZR83aG7nKVKtxaa2cebSIawgAb7c2+M2Up4bNyOYTNeijhg=='
+      password: '#bn_protected#MgSqcOAbvh8GjbKKJPnhEPOBg6n3vhDUO9psToi0XgOnXQex+NnekVY='
+      rootPassword: '#bn_protected#qWHlfrdwTHWGqSDzKZn4HHOaLlXKhz/BYbHFsPUAheI0T/SqTpAK'
+      sshKey: '#bn_protected#HO6V4EanP4HiLTqmI/lr5tMAlXYwMg2jmBuQ0r2jgaUm9qt1khzhKSOWnuHaItoY13pBy3qTinNPF9GXR4vmBoFFUkmmN2NuRDBVmxIne8bJ56WWFi0AcEhxxqz39INdiT2VqsJzP9WHLDPC80ZPcDuHctzLJa66P0/okvfb4/jiF2FwpTcKUEW3mld+OP1OWqZKPR8GHhJ93VQ8Noev6lqxpguHV6tvQiGqPSjJKqZGIdbWLjaDnG7x/2Fum4STQnulVDczEixV2EiIbYApjhtra5xi5vVwG5sbZC3lM6Bf5kwnth/4mhXOEVZs4XIHtsMXYQVzZzs1FqrwVeO7FH4su03pZdwDnuy1Ig/XTHzBa9z6QYyolF7Rj2CGMiG3VnN1BmrZZ91tNsqAkjIVoBbXGNK/gkIHBigK+i+Zvbe46DLQ3ko/JoIaRuW2wb5lO32Pkf+3XYTETQjnWqgm/cXDk2zhl9Cjpo5cTyryJVi1tBFC+g0JHdmJ4nTW7CsfbjtETOqC4iPMf482hp7wm8VUncdqX4LZnHXQKvftt+z0ItlzOToDT9RtXc4Pp6O1Ni5t0IXUO97n6ciKwJXDKLmBKXxazdDuq+lpZ8z/v0vbQJMv7wXxjDzOcyBwlp6HjGizsxS802XNVIP3JHmdxcZ4'
+  - key: runner_ssh
+    name: ssh custom
+    disabled: false
+    workDir: ""
+    args:
+      authType: customSshKey
+      commands: |-
+        sudo whoami
+        hostname
+        uname -a
+        pwd
+        ls
+      host: '@{Host}'
+      port: 2222
+      user: '@{User}'
+    argsProtected:
+      passphrase: '#bn_protected#XGrzIk2MX1cSN0dvbSkKrrSpUSiTdoG1KzJcas0lhW3eFmnat6Qa04wVcJigQiZl'
+      password: '#bn_protected#MgSqcOAbvh8GjbKKJPnhEPOBg6n3vhDUO9psToi0XgOnXQex+NnekVY='
+      rootPassword: '#bn_protected#i1zp+piyGj4cEsSISViwdTrf3wiMvVhmbRuYpCogWronUFOZceqH'
+      sshKey: '#bn_protected#HO6V4EanP4HiLTqmI/lr5tMAlXYwMg2jmBuQ0r2jgaUm9qt1khzhKSOWnuHaItoY13pBy3qTinNPF9GXR4vmBoFFUkmmN2NuRDBVmxIne8bJ56WWFi0AcEhxxqz39INdiT2VqsJzP9WHLDPC80ZPcDuHctzLJa66P0/okvfb4/jiF2FwpTcKUEW3mld+OP1OWqZKPR8GHhJ93VQ8Noev6lqxpguHV6tvQiGqPSjJKqZGIdbWLjaDnG7x/2Fum4STQnulVDczEixV2EiIbYApjhtra5xi5vVwG5sbZC3lM6Bf5kwnth/4mhXOEVZs4XIHtsMXYQVzZzs1FqrwVeO7FH4su03pZdwDnuy1Ig/XTHzBa9z6QYyolF7Rj2CGMiG3VnN1BmrZZ91tNsqAkjIVoBbXGNK/gkIHBigK+i+Zvbe46DLQ3ko/JoIaRuW2wb5lO32Pkf+3XYTETQjnWqgm/cXDk2zhl9Cjpo5cTyryJVi1tBFC+g0JHdmJ4nTW7CsfbjtETOqC4iPMf482hp7wm8VUncdqX4LZnHXQKvftt+z0ItlzOToDT9RtXc4Pp6O1Ni5t0IXUO97n6ciKwJXDKLmBKXxazdDuq+lpZ8z/v0vbQJMv7wXxjDzOcyBwlp6HjGizsxS802XNVIP3JHmdxcZ4'
+  artifacts: []
+  variables:
+  - name: Host
+    value: 10.64.1.253
+    exposeAsEnv: false
+    isProtected: false
+    askEveryTime: false
+  - name: Port
+    value: "2222"
+    exposeAsEnv: false
+    isProtected: false
+    askEveryTime: false
+  - name: User
+    value: gpctadmin
+    exposeAsEnv: false
+    isProtected: false
+    askEveryTime: false
+  - name: Passphrase_Default
+    value: '#bn_protected#ozmh2r8WWbK3fmltWbnbzgdTQ5DXFLumJ+Co2IDeAKU='
+    exposeAsEnv: true
+    isProtected: true
+    askEveryTime: false
+  - name: Passphrase_Custom
+    value: '#bn_protected#/Efnuh2xB81O3FK/Lg+bU9tR5gKm4eQBw9lB229aAo8S7lQ='
+    exposeAsEnv: true
+    isProtected: true
+    askEveryTime: false
+  - name: Password
+    value: '#bn_protected#cDdvKEWViVaiYidU+XRqmnUhbDl1NwoDUdAY8vIWCliGECvCJadpFpE='
+    exposeAsEnv: true
+    isProtected: true
+    askEveryTime: false
