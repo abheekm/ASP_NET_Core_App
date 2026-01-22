@@ -1,0 +1,213 @@
+name: SSH All Auths Linux
+description: ""
+settings:
+  disableCache: false
+  vcs-steps: []
+  build-steps:
+  - key: runner_ssh
+    name: ssh
+    disabled: false
+    workDir: ""
+    args:
+      authType: customSshKey
+      commands: |-
+        whoami
+        hostname
+        uname -a
+        pwd
+        ls
+      host: 10.64.1.253
+      port: 2222
+      user: gpctadmin
+    argsProtected:
+      passphrase: 'ABC@123'
+      password: 'grapecity@123'
+      sshKey: '-----BEGIN OPENSSH PRIVATE KEY-----b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABDDzgMQKYoZ2GJj+EgeYal1AAAAGAAAAAEAAAAzAAAAC3NzaC1lZDI1NTE5AAAAIKqTykEQNH9ikJh9NssGYgDxbndQBVE4THnLv0itbnMwAAAAoGO01MRBMd/Jx5O/KG+pgyV2SsLjLEP3u/7DM+HQA0QTTQRi+erTk4XfP5rbdaHrJJI+FoLM7tpagZ5t1l18iDfchk5gbecciZtCzs++IMCXMUop2WSfrXFLU60eZ3GFLh6Vbs9pjhFA2QD9xJ9K8aXgcz/KVHUpdKQocUveuHRLIbzGq1vVfYJxqyPSb7xEyEf98uy6HOabL1D/5QTZ7m8=-----END OPENSSH PRIVATE KEY-----'
+  - key: runner_ssh
+    name: ssh combined
+    disabled: false
+    workDir: ""
+    args:
+      authType: customSshKey
+      commands: whoami && hostname && uname -a && df -h && ping -c 2 google.com
+      host: 10.64.1.253
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      passphrase: 'ABC@123'
+      password: 'grapecity@123'
+      sshKey: '-----BEGIN OPENSSH PRIVATE KEY-----b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABDDzgMQKYoZ2GJj+EgeYal1AAAAGAAAAAEAAAAzAAAAC3NzaC1lZDI1NTE5AAAAIKqTykEQNH9ikJh9NssGYgDxbndQBVE4THnLv0itbnMwAAAAoGO01MRBMd/Jx5O/KG+pgyV2SsLjLEP3u/7DM+HQA0QTTQRi+erTk4XfP5rbdaHrJJI+FoLM7tpagZ5t1l18iDfchk5gbecciZtCzs++IMCXMUop2WSfrXFLU60eZ3GFLh6Vbs9pjhFA2QD9xJ9K8aXgcz/KVHUpdKQocUveuHRLIbzGq1vVfYJxqyPSb7xEyEf98uy6HOabL1D/5QTZ7m8=-----END OPENSSH PRIVATE KEY-----'
+  - key: runner_ssh
+    name: sudo commands
+    disabled: false
+    workDir: ""
+    args:
+      authType: customSshKey
+      commands: |-
+        sudo whoami
+        sudo ss -tlnp
+        sudo systemctl status sshd
+        sudo cat /etc/shadow | head -3
+        sudo dmesg | tail -5
+        sudo ls -la /root | head
+      host: 10.64.1.253
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      passphrase: 'ABC@123'
+      password: 'grapecity@123'
+      rootPassword: 'grapecity@123'
+      sshKey: '-----BEGIN OPENSSH PRIVATE KEY-----b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABDDzgMQKYoZ2GJj+EgeYal1AAAAGAAAAAEAAAAzAAAAC3NzaC1lZDI1NTE5AAAAIKqTykEQNH9ikJh9NssGYgDxbndQBVE4THnLv0itbnMwAAAAoGO01MRBMd/Jx5O/KG+pgyV2SsLjLEP3u/7DM+HQA0QTTQRi+erTk4XfP5rbdaHrJJI+FoLM7tpagZ5t1l18iDfchk5gbecciZtCzs++IMCXMUop2WSfrXFLU60eZ3GFLh6Vbs9pjhFA2QD9xJ9K8aXgcz/KVHUpdKQocUveuHRLIbzGq1vVfYJxqyPSb7xEyEf98uy6HOabL1D/5QTZ7m8=-----END OPENSSH PRIVATE KEY-----'
+  - key: runner_ssh
+    name: file system operations
+    disabled: false
+    workDir: ""
+    args:
+      authType: customSshKey
+      commands: |-
+        ls -la
+        touch ssh_test.txt
+        echo "hello" > ssh_test.txt
+        cat ssh_test.txt
+        rm ssh_test.txt
+      host: 10.64.1.253
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      passphrase: 'ABC@123'
+      password: 'grapecity@123'
+      sshKey: '-----BEGIN OPENSSH PRIVATE KEY-----b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABDDzgMQKYoZ2GJj+EgeYal1AAAAGAAAAAEAAAAzAAAAC3NzaC1lZDI1NTE5AAAAIKqTykEQNH9ikJh9NssGYgDxbndQBVE4THnLv0itbnMwAAAAoGO01MRBMd/Jx5O/KG+pgyV2SsLjLEP3u/7DM+HQA0QTTQRi+erTk4XfP5rbdaHrJJI+FoLM7tpagZ5t1l18iDfchk5gbecciZtCzs++IMCXMUop2WSfrXFLU60eZ3GFLh6Vbs9pjhFA2QD9xJ9K8aXgcz/KVHUpdKQocUveuHRLIbzGq1vVfYJxqyPSb7xEyEf98uy6HOabL1D/5QTZ7m8=-----END OPENSSH PRIVATE KEY-----'
+  - key: runner_ssh
+    name: directory and permission
+    disabled: false
+    workDir: ""
+    args:
+      authType: customSshKey
+      commands: |-
+        mkdir ssh_dir
+        cd ssh_dir
+        pwd
+        chmod 755 .
+        ls -ld .
+        cd ..
+        rm -rf ssh_dir
+      host: 10.64.1.253
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      passphrase: 'ABC@123'
+      password: 'grapecity@123'
+      sshKey: '-----BEGIN OPENSSH PRIVATE KEY-----b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABDDzgMQKYoZ2GJj+EgeYal1AAAAGAAAAAEAAAAzAAAAC3NzaC1lZDI1NTE5AAAAIKqTykEQNH9ikJh9NssGYgDxbndQBVE4THnLv0itbnMwAAAAoGO01MRBMd/Jx5O/KG+pgyV2SsLjLEP3u/7DM+HQA0QTTQRi+erTk4XfP5rbdaHrJJI+FoLM7tpagZ5t1l18iDfchk5gbecciZtCzs++IMCXMUop2WSfrXFLU60eZ3GFLh6Vbs9pjhFA2QD9xJ9K8aXgcz/KVHUpdKQocUveuHRLIbzGq1vVfYJxqyPSb7xEyEf98uy6HOabL1D/5QTZ7m8=-----END OPENSSH PRIVATE KEY-----'
+  - key: runner_ssh
+    name: env check
+    disabled: false
+    workDir: ""
+    args:
+      authType: defaultSshKey
+      commands: |-
+        echo $SHELL
+        echo $PATH
+        env | head -5
+        which bash
+      host: 10.64.1.253
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      passphrase: 'ABCD'
+      password: 'grapecity@123'
+  - key: runner_ssh
+    name: failure check
+    disabled: false
+    workDir: ""
+    args:
+      authType: password
+      commands: "true"
+      host: 10.64.1.253
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      password: 'grapecity@123'
+  - key: runner_ssh
+    name: stdout stderr check
+    disabled: false
+    workDir: ""
+    args:
+      authType: password
+      commands: |-
+        echo "stdout test"
+        echo "stderr test" 1>&2
+      host: 10.64.1.253
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      password: 'grapecity@123'
+  - key: runner_ssh
+    name: background async commands
+    disabled: false
+    workDir: ""
+    args:
+      authType: defaultSshKey
+      commands: |-
+        sleep 5 &
+        jobs
+        ps -ef | grep sleep
+      host: 10.64.1.253
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      passphrase: 'ABCD'
+      password: 'grapecity@123'
+  - key: runner_ssh
+    name: script execution
+    disabled: false
+    workDir: ""
+    args:
+      authType: defaultSshKey
+      commands: |-
+        echo -e '#!/bin/bash\necho script_run' > test.sh
+        chmod +x test.sh
+        ./test.sh
+        rm ./test.sh
+      host: 10.64.1.253
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      passphrase: 'ABCD'
+      password: 'grapecity@123'
+  - key: runner_ssh
+    name: start and stop process
+    disabled: false
+    workDir: ""
+    args:
+      authType: defaultSshKey
+      commands: |-
+        sleep 10 &
+        PID=$!
+        echo "Started PID=$PID"
+        sleep 2
+        kill $PID
+        echo "Stopped PID=$PID"
+      host: 10.64.1.253
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      passphrase: 'ABCD'
+      password: 'grapecity@123'
+  - key: runner_ssh
+    name: additional commands
+    disabled: false
+    workDir: ""
+    args:
+      authType: defaultSshKey
+      commands: |-
+        ulimit -a
+        df -h
+        free -m
+      host: 10.64.1.253
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      passphrase: 'ABCD'
+      password: 'grapecity@123'
+  artifacts: []
+  variables: []
