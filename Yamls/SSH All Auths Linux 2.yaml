@@ -20,8 +20,8 @@ settings:
       port: 2222
       user: gpctadmin
     argsProtected:
-      passphrase: 'grapecity@123'
-      password: 'ABC@123'
+      passphrase: 'ABC@123'
+      password: 'grapecity@123'
       sshKey: "-----BEGIN OPENSSH PRIVATE KEY-----\nb3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABDDzgMQKY\noZ2GJj+EgeYal1AAAAGAAAAAEAAAAzAAAAC3NzaC1lZDI1NTE5AAAAIKqTykEQNH9ikJh9\nNssGYgDxbndQBVE4THnLv0itbnMwAAAAoGO01MRBMd/Jx5O/KG+pgyV2SsLjLEP3u/7DM+\nHQA0QTTQRi+erTk4XfP5rbdaHrJJI+FoLM7tpagZ5t1l18iDfchk5gbecciZtCzs++IMCX\nMUop2WSfrXFLU60eZ3GFLh6Vbs9pjhFA2QD9xJ9K8aXgcz/KVHUpdKQocUveuHRLIbzGq1\nvVfYJxqyPSb7xEyEf98uy6HOabL1D/5QTZ7m8=\n-----END OPENSSH PRIVATE KEY-----"
   - key: runner_ssh
     name: env check
@@ -38,8 +38,8 @@ settings:
       port: 22
       user: gpctadmin
     argsProtected:
-      passphrase: 'grapecity@123'
-      password: 'ABCD'
+      passphrase: 'ABCD'
+      password: 'grapecity@123'
   - key: runner_ssh
     name: failure check
     disabled: false
