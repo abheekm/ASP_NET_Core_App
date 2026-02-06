@@ -20,9 +20,9 @@ settings:
       port: 2222
       user: gpctadmin
     argsProtected:
-      passphrase: '#bn_protected#4XSODpdf/DIHHsJGE096/4habloYMyqsVY6PZNPOkurvY4w='
-      password: '#bn_protected#OgB5ZCk0u9ES0mFjpC09R26UBpChNGelOuW6rAMJU1E1g/BBO37IEqE='
-      sshKey: '#bn_protected#rR0hAf16UQRWA/VtNZtn6ENCi35i9bhOL79qEHBds4DwZGZngdkfBIO69Wm+GDgnftToJyUun9Z624dTxjRB0n9vjKxZmInkJhs5Vh7U2J9iqhiUlVnMjbeQ22njB1ezPOu9DFo4TJ5AiTqS3XvfGZ8dsYjtk0wqe4yKJwfiltCBB+ljpVOUT7Mbn8fJl+k+wLfTqCPrKUeMrStAHwR4v+NRqY9NE3wpWPGd04UnHka2VYYIqSUy7rwfHr8xrAlTBd4KS53ZZYrycqKLU+/Ns2O0QOV6rMa0m14xpLnBjiNVKGBvymL/0ZhmcEqsYP+xJ6Bftb1GurcIQuH7uRj3wUYbLlLocUxHxmdMKifW14/LNOizlsTdUxF1iAmTSwCiID4f7PEzYCvqTuKr0CmNuD+oF12moYZGcHTGYyJnQp4nblJsnsd7d/ebKaVxYmd2C9jgnr6ro0UjcHv5jpL2ubBP1WNkGkywDI1q+cM76ZLhGQgp38487oaNjPkIHnChfLbhGOHznZLRMFycBMi+f2hi2Z10Cc/PqxdjeTmCncq5sdj8hymakrWjbTjoGo1UyJKfA58RoejhinhWXl5dzP5PSQC870boz2gjjztNXjNGhvkwXcPSI10d22RZFcU71Z1MaCKZRAEz7hzzk/zSs49s'
+      passphrase: '4XSODpdf/DIHHsJGE096/4habloYMyqsVY6PZNPOkurvY4w='
+      password: 'OgB5ZCk0u9ES0mFjpC09R26UBpChNGelOuW6rAMJU1E1g/BBO37IEqE='
+      sshKey: 'rR0hAf16UQRWA/VtNZtn6ENCi35i9bhOL79qEHBds4DwZGZngdkfBIO69Wm+GDgnftToJyUun9Z624dTxjRB0n9vjKxZmInkJhs5Vh7U2J9iqhiUlVnMjbeQ22njB1ezPOu9DFo4TJ5AiTqS3XvfGZ8dsYjtk0wqe4yKJwfiltCBB+ljpVOUT7Mbn8fJl+k+wLfTqCPrKUeMrStAHwR4v+NRqY9NE3wpWPGd04UnHka2VYYIqSUy7rwfHr8xrAlTBd4KS53ZZYrycqKLU+/Ns2O0QOV6rMa0m14xpLnBjiNVKGBvymL/0ZhmcEqsYP+xJ6Bftb1GurcIQuH7uRj3wUYbLlLocUxHxmdMKifW14/LNOizlsTdUxF1iAmTSwCiID4f7PEzYCvqTuKr0CmNuD+oF12moYZGcHTGYyJnQp4nblJsnsd7d/ebKaVxYmd2C9jgnr6ro0UjcHv5jpL2ubBP1WNkGkywDI1q+cM76ZLhGQgp38487oaNjPkIHnChfLbhGOHznZLRMFycBMi+f2hi2Z10Cc/PqxdjeTmCncq5sdj8hymakrWjbTjoGo1UyJKfA58RoejhinhWXl5dzP5PSQC870boz2gjjztNXjNGhvkwXcPSI10d22RZFcU71Z1MaCKZRAEz7hzzk/zSs49s'
   - key: runner_ssh
     name: ssh combined
     disabled: false
@@ -34,9 +34,9 @@ settings:
       port: 22
       user: gpctadmin
     argsProtected:
-      passphrase: '#bn_protected#PmZlnXtF7W0OtTMmp5kG+hCHgnC1h9TCbCcKSek2wXASkvg='
-      password: '#bn_protected#kZiyWvnLSp5neJaXt37IL/aV1VIShf96lfUodoBfhi5Xsr76MbmACfc='
-      sshKey: '#bn_protected#plVbTAu+byYu5RXdxwmtgCEA4oOo4GSjynFGIT0hYWtEajFwrSHFdSK7W/lHtEix3x4FNheQnvB9Efi4VD6weFeOJXDnoQnqrIu8yzzM8f04IamM9usA5K1x4cUJmZDTungu3kXEz5JhPOMpHD2IV+HwZ5CrXKis5jinHQNZopEhI7f8/XIclj1K755HqdNxzIEdRn1RWs1mhABrNiC2WAvKnjolLYrjvC6rSP693NRydt9+DE3TEBKFdVUZuz3LZjuVZWcp8yqRcHU5Gzkh9sXJfMOC2fVXkq4CYNW0EMi3kVCgnmUT/JvRocMlVGj59K7FDwdCxEotwOp1QzzyKA/8QZMbXYuiSMydJ9LAqh9tFfF89kcgCscYrLrmo3j/Lk3faeud3OLeVrL0nFdUZnlw7GtfVHwboP1Xi6dsA8thMWBWqTnR34XTBHzWNm/40zqVB0fzsqAyuI8fuOC0Q/NxA6nU9USI+hmpvEPYC4eJz2OIs2JcWUwJwbgJoIJqO7tDBa2RxPGmuKqQAq5Kqf6E0vNhJ6u5APRh4b8LcXMmQsuhHLViiBnLt89GbrxYzwQ7EkkvrwaJTYCHUKJd/uz7fIDpfNKp9tBCvpJpyjou2H3XHxmqCdwqIsrWq6r0yKegJes7Y2pIjNNC1dsT+V70'
+      passphrase: 'PmZlnXtF7W0OtTMmp5kG+hCHgnC1h9TCbCcKSek2wXASkvg='
+      password: 'kZiyWvnLSp5neJaXt37IL/aV1VIShf96lfUodoBfhi5Xsr76MbmACfc='
+      sshKey: 'plVbTAu+byYu5RXdxwmtgCEA4oOo4GSjynFGIT0hYWtEajFwrSHFdSK7W/lHtEix3x4FNheQnvB9Efi4VD6weFeOJXDnoQnqrIu8yzzM8f04IamM9usA5K1x4cUJmZDTungu3kXEz5JhPOMpHD2IV+HwZ5CrXKis5jinHQNZopEhI7f8/XIclj1K755HqdNxzIEdRn1RWs1mhABrNiC2WAvKnjolLYrjvC6rSP693NRydt9+DE3TEBKFdVUZuz3LZjuVZWcp8yqRcHU5Gzkh9sXJfMOC2fVXkq4CYNW0EMi3kVCgnmUT/JvRocMlVGj59K7FDwdCxEotwOp1QzzyKA/8QZMbXYuiSMydJ9LAqh9tFfF89kcgCscYrLrmo3j/Lk3faeud3OLeVrL0nFdUZnlw7GtfVHwboP1Xi6dsA8thMWBWqTnR34XTBHzWNm/40zqVB0fzsqAyuI8fuOC0Q/NxA6nU9USI+hmpvEPYC4eJz2OIs2JcWUwJwbgJoIJqO7tDBa2RxPGmuKqQAq5Kqf6E0vNhJ6u5APRh4b8LcXMmQsuhHLViiBnLt89GbrxYzwQ7EkkvrwaJTYCHUKJd/uz7fIDpfNKp9tBCvpJpyjou2H3XHxmqCdwqIsrWq6r0yKegJes7Y2pIjNNC1dsT+V70'
   - key: runner_ssh
     name: sudo commands
     disabled: false
@@ -54,10 +54,10 @@ settings:
       port: 22
       user: gpctadmin
     argsProtected:
-      passphrase: '#bn_protected#j6QVPeadZrMa45M713ILHoh3v5DanKtYdr3R5UwgVaDTYBs='
-      password: '#bn_protected#qJgLCkRl766Oof4SMju2ACiyo8PTIfjrq3zccOlBdWeAUkL9abKMwI4='
-      rootPassword: '#bn_protected#fE5xQFzhv3dtjsYnHj7i3MhUIWGN1qIqTvb9FUqg605YPC5MpAD9FoE='
-      sshKey: '#bn_protected#E4Qq0VQo2OmmUmhDZKJCh46KxrU6vzd36K7xtNJDbxjmx2qiSGsYWm5+QcJIALAv0kkeRTJK6uX0DyvfX3WjPke/hKGf94AQMhXNoW7DOU3n7aaKqeeGeK/qH+Y+8iaL/KVdIc+kza7Yr6zTEh+Gdke2DCeHNH9SYkUT15OGzIjAay+ILAWSGS26fcpMJuTJ/XArMQbJkEpBNkVYPZ+CM4pDVeAOTzqPkFarWvDAG57y9VXYlZlnpJ5xhKT5+qlInJuYNh65BHwAHNwjBByFQGxXZtWlJ/0JgHNv8ExkpBcKDNWhwX5NXo1DUWNfO3gXADgsEm0kx9ZlXaQqaXPAjD2E6PDJsOoBewEv5q+MKaBUpAjjMb/tYx1t0iiy2I7f7imWyG8ZuvrGtmzraqgJL2/Cz5jYF/F5rBHruSKJPV9dgRXeawHD89O7HozuKSMFIQ65hUKGiNEfA8bv78O/75eRM5001Sj23NmPUuyArzEtYJmKNrqP9k3eHaok7mSB7NgAb+wUMWogpQfyOSiD5K8qT2vTHt+zg4DhPoghWcTZ9mP21gvBrHFlBkhkt6UVszBlfss55n3xM0ePOmAf9yaj8FvztTQiFRnt2soyuFjaBJgeyYs+KL1kA4r8geWqld3NtvEwewpiNhoyqKBR4RJs'
+      passphrase: 'j6QVPeadZrMa45M713ILHoh3v5DanKtYdr3R5UwgVaDTYBs='
+      password: 'qJgLCkRl766Oof4SMju2ACiyo8PTIfjrq3zccOlBdWeAUkL9abKMwI4='
+      rootPassword: 'fE5xQFzhv3dtjsYnHj7i3MhUIWGN1qIqTvb9FUqg605YPC5MpAD9FoE='
+      sshKey: 'E4Qq0VQo2OmmUmhDZKJCh46KxrU6vzd36K7xtNJDbxjmx2qiSGsYWm5+QcJIALAv0kkeRTJK6uX0DyvfX3WjPke/hKGf94AQMhXNoW7DOU3n7aaKqeeGeK/qH+Y+8iaL/KVdIc+kza7Yr6zTEh+Gdke2DCeHNH9SYkUT15OGzIjAay+ILAWSGS26fcpMJuTJ/XArMQbJkEpBNkVYPZ+CM4pDVeAOTzqPkFarWvDAG57y9VXYlZlnpJ5xhKT5+qlInJuYNh65BHwAHNwjBByFQGxXZtWlJ/0JgHNv8ExkpBcKDNWhwX5NXo1DUWNfO3gXADgsEm0kx9ZlXaQqaXPAjD2E6PDJsOoBewEv5q+MKaBUpAjjMb/tYx1t0iiy2I7f7imWyG8ZuvrGtmzraqgJL2/Cz5jYF/F5rBHruSKJPV9dgRXeawHD89O7HozuKSMFIQ65hUKGiNEfA8bv78O/75eRM5001Sj23NmPUuyArzEtYJmKNrqP9k3eHaok7mSB7NgAb+wUMWogpQfyOSiD5K8qT2vTHt+zg4DhPoghWcTZ9mP21gvBrHFlBkhkt6UVszBlfss55n3xM0ePOmAf9yaj8FvztTQiFRnt2soyuFjaBJgeyYs+KL1kA4r8geWqld3NtvEwewpiNhoyqKBR4RJs'
   - key: runner_ssh
     name: file system operations
     disabled: false
@@ -74,9 +74,9 @@ settings:
       port: 22
       user: gpctadmin
     argsProtected:
-      passphrase: '#bn_protected#oHh6nXuPlPAgpkpv844/rAhHkKXmbkNXlhTj2gzlzdd7SX8='
-      password: '#bn_protected#mRW5HARargtj0tFOLQJslc861c/7I+VJyvnwoV+qXTJ0WfY9GwTByzw='
-      sshKey: '#bn_protected#OrGdTF2as3AcZXKtbIuHTzk8rZrDJWxhgdeJMELG6keFeDK1RESEnAiL4Wq4IestVqREC4peeTbUUKdgQJaLNXLXu1YHSupwzS88rvhglK41QYUZFrZ/NiU9gyzdTwhmfIVOa7T1j/RPPRL73q+n0QwRotSLfLviQUUGtqpr2DS3YHsPj70Sqv87pXi70Up01hnY0JffvYcApDfIcaIs0HAEJzccNSdvaZdB6L8fO2jICQ750g4oKUxAGl0BS2x73cRPPjmY5HX5iUil8hVOrUPY0KwpIZB9H/7jVJe/Gwdu2r/nl5YqhiTmmjIGMHH3Y578AzLQUdwb9PdskG6z5Tcyl/3H4XuBbQadrx+DfOnDdQiCIDZ31uPz/Q6ivlLpPbuMSXpXI/RUbVnpfEICmHJN6g70pJbopBNKsbLDXje8oRguEAZi4joYvbw9JcSg2GwwI1mvlLFdOT0lt5aUjuaHA/Qo8Sj2gh1VgaCjalJJbVoCeYun4aiG0+1odCoqTPf8IvE26S2vhrYoj37GB0W175wn730F8scQpA+ilknYGSjRE7LFEtWqQ+XiDc7E5bZVNoRhWIDDSbWlxQYCoHzmi3sJP4sOKBq0MCB4eqHXK4LWLW9rin0bWSCHPn6poMNuOUfV8PbQxBHXwgLTHGpN'
+      passphrase: 'oHh6nXuPlPAgpkpv844/rAhHkKXmbkNXlhTj2gzlzdd7SX8='
+      password: 'mRW5HARargtj0tFOLQJslc861c/7I+VJyvnwoV+qXTJ0WfY9GwTByzw='
+      sshKey: 'OrGdTF2as3AcZXKtbIuHTzk8rZrDJWxhgdeJMELG6keFeDK1RESEnAiL4Wq4IestVqREC4peeTbUUKdgQJaLNXLXu1YHSupwzS88rvhglK41QYUZFrZ/NiU9gyzdTwhmfIVOa7T1j/RPPRL73q+n0QwRotSLfLviQUUGtqpr2DS3YHsPj70Sqv87pXi70Up01hnY0JffvYcApDfIcaIs0HAEJzccNSdvaZdB6L8fO2jICQ750g4oKUxAGl0BS2x73cRPPjmY5HX5iUil8hVOrUPY0KwpIZB9H/7jVJe/Gwdu2r/nl5YqhiTmmjIGMHH3Y578AzLQUdwb9PdskG6z5Tcyl/3H4XuBbQadrx+DfOnDdQiCIDZ31uPz/Q6ivlLpPbuMSXpXI/RUbVnpfEICmHJN6g70pJbopBNKsbLDXje8oRguEAZi4joYvbw9JcSg2GwwI1mvlLFdOT0lt5aUjuaHA/Qo8Sj2gh1VgaCjalJJbVoCeYun4aiG0+1odCoqTPf8IvE26S2vhrYoj37GB0W175wn730F8scQpA+ilknYGSjRE7LFEtWqQ+XiDc7E5bZVNoRhWIDDSbWlxQYCoHzmi3sJP4sOKBq0MCB4eqHXK4LWLW9rin0bWSCHPn6poMNuOUfV8PbQxBHXwgLTHGpN'
   - key: runner_ssh
     name: directory and permission
     disabled: false
@@ -95,9 +95,9 @@ settings:
       port: 22
       user: gpctadmin
     argsProtected:
-      passphrase: '#bn_protected#E9sBvH2Li/2Of2Pue6Vyjqohu5DM8Q6CYvr2qa7Q2wsM5rY='
-      password: '#bn_protected#X2UuhqwTp0D1Ou8OrRhP8+S6Rd+vOj7kNzyncZFMQbMb0hBI44qPStc='
-      sshKey: '#bn_protected#qJdoIDR2I69lrz6frPrcH/DEPG4PaDYmzTbhcWF4Sb3JFhYaa95MzETz2qBVxR/qYYsotwGfW/Lj32AnV0JltvJMVCpq03GtW5yaApHnFBuNme3hxb/rNm5Us6wfIJdLLNj1mYasTW3NxALazLOTrnkviYIa8ozs9MLcrGwjy1n6LwXOVhaFO5Qxh7zd/L1ps/ttxmNIiNzFlxpo79/Y0XF6Ur1ouOdGUb256XpIGoHZWuJG1JtzivPx2AFp/F2tgaqfXoPBRN7c3HWs6vcy9FBsq5q3CtHViNWEn0eIpfh04ZLswBoDzW7KXqRIb1TTHVyyYF4LB1rdlGeHRzJaPtaNDsZaVXJ1nwOGnicr/DjbqRFXZJ5K6lxvvF7hmyJn2bER0pgLfuiYvxoG7GpXIjMriP/VvrtDSKqCiKp2W5qEANk1egSBUxGIOyJK3tS77KraND6WSoyiTM/t6LeVoOrvbl1dsKw2yK46WvTWt9da6maZF/6jS7Ci0cBaSJs7bKCKd9Ys7yqsWNQW8bqEB1uCt8wddSwalJOS8zQZbuWlzIxiBDgUResSOcqc7QGcztm27BGeTvjDZeUd2hKsV2nY+7v2UT+tpsLsWxn8qqhMDmWv/CcGZyMhnHI1G0T2qDSihAiOsAfBsIpdASajzfBC'
+      passphrase: 'E9sBvH2Li/2Of2Pue6Vyjqohu5DM8Q6CYvr2qa7Q2wsM5rY='
+      password: 'X2UuhqwTp0D1Ou8OrRhP8+S6Rd+vOj7kNzyncZFMQbMb0hBI44qPStc='
+      sshKey: 'qJdoIDR2I69lrz6frPrcH/DEPG4PaDYmzTbhcWF4Sb3JFhYaa95MzETz2qBVxR/qYYsotwGfW/Lj32AnV0JltvJMVCpq03GtW5yaApHnFBuNme3hxb/rNm5Us6wfIJdLLNj1mYasTW3NxALazLOTrnkviYIa8ozs9MLcrGwjy1n6LwXOVhaFO5Qxh7zd/L1ps/ttxmNIiNzFlxpo79/Y0XF6Ur1ouOdGUb256XpIGoHZWuJG1JtzivPx2AFp/F2tgaqfXoPBRN7c3HWs6vcy9FBsq5q3CtHViNWEn0eIpfh04ZLswBoDzW7KXqRIb1TTHVyyYF4LB1rdlGeHRzJaPtaNDsZaVXJ1nwOGnicr/DjbqRFXZJ5K6lxvvF7hmyJn2bER0pgLfuiYvxoG7GpXIjMriP/VvrtDSKqCiKp2W5qEANk1egSBUxGIOyJK3tS77KraND6WSoyiTM/t6LeVoOrvbl1dsKw2yK46WvTWt9da6maZF/6jS7Ci0cBaSJs7bKCKd9Ys7yqsWNQW8bqEB1uCt8wddSwalJOS8zQZbuWlzIxiBDgUResSOcqc7QGcztm27BGeTvjDZeUd2hKsV2nY+7v2UT+tpsLsWxn8qqhMDmWv/CcGZyMhnHI1G0T2qDSihAiOsAfBsIpdASajzfBC'
   - key: runner_ssh
     name: env check
     disabled: false
@@ -113,8 +113,8 @@ settings:
       port: 22
       user: gpctadmin
     argsProtected:
-      passphrase: '#bn_protected#n2KPZfPRG/1CLVyI5Jy5eQkSyC2oCGjn/Y5rqSulhwQ='
-      password: '#bn_protected#aHB4PHJjSQJHRwFliPU112P48yjYawvnzOIrONzTnJiNVdS2JZBT94Y='
+      passphrase: 'n2KPZfPRG/1CLVyI5Jy5eQkSyC2oCGjn/Y5rqSulhwQ='
+      password: 'aHB4PHJjSQJHRwFliPU112P48yjYawvnzOIrONzTnJiNVdS2JZBT94Y='
   - key: runner_ssh
     name: failure check
     disabled: false
@@ -126,7 +126,7 @@ settings:
       port: 22
       user: gpctadmin
     argsProtected:
-      password: '#bn_protected#5c6K7enPFW/La6sedkdzRhxsXfWbCAw0G7DLcCFmGg2YMslRUrktnHs='
+      password: '5c6K7enPFW/La6sedkdzRhxsXfWbCAw0G7DLcCFmGg2YMslRUrktnHs='
   - key: runner_ssh
     name: stdout stderr check
     disabled: false
@@ -140,7 +140,7 @@ settings:
       port: 22
       user: gpctadmin
     argsProtected:
-      password: '#bn_protected#CGCCBEr50D3B1AHNRUZDKzs5ttksCe+40oXbdYvkqqRodvXrPl+4UjI='
+      password: 'CGCCBEr50D3B1AHNRUZDKzs5ttksCe+40oXbdYvkqqRodvXrPl+4UjI='
   - key: runner_ssh
     name: background async commands
     disabled: false
@@ -155,8 +155,8 @@ settings:
       port: 22
       user: gpctadmin
     argsProtected:
-      passphrase: '#bn_protected#SLy96EJH4+t5R2RVWJcahlVwT4KXI2dysEi/uFbutzg='
-      password: '#bn_protected#SBVoYg2Zmxu6+mhC7AsJJZPQ+fT+POyDiM1xriorDsh0iVtFICXaNgk='
+      passphrase: 'SLy96EJH4+t5R2RVWJcahlVwT4KXI2dysEi/uFbutzg='
+      password: 'SBVoYg2Zmxu6+mhC7AsJJZPQ+fT+POyDiM1xriorDsh0iVtFICXaNgk='
   - key: runner_ssh
     name: script execution
     disabled: false
@@ -172,8 +172,8 @@ settings:
       port: 22
       user: gpctadmin
     argsProtected:
-      passphrase: '#bn_protected#/ETwyz7+mPcckhnEYZavXLhzmXbEqlNbzAO79/QspRA='
-      password: '#bn_protected#RVmESe0h4N/AVwJPDPjxo+d5LyA/JT0LQlwO3xKMsEIXubN8KzfN1js='
+      passphrase: '/ETwyz7+mPcckhnEYZavXLhzmXbEqlNbzAO79/QspRA='
+      password: 'RVmESe0h4N/AVwJPDPjxo+d5LyA/JT0LQlwO3xKMsEIXubN8KzfN1js='
   - key: runner_ssh
     name: start and stop process
     disabled: false
@@ -191,8 +191,8 @@ settings:
       port: 22
       user: gpctadmin
     argsProtected:
-      passphrase: '#bn_protected#143EbJ68btK7fgYfif/G4Lj5a1742ANB5IPq63PovAk='
-      password: '#bn_protected#td2PHExe4koxr0g3BN8KtT5MEw2FW2jeYZ7BXbdS8/uT3+Ng8TpNTtI='
+      passphrase: '143EbJ68btK7fgYfif/G4Lj5a1742ANB5IPq63PovAk='
+      password: 'td2PHExe4koxr0g3BN8KtT5MEw2FW2jeYZ7BXbdS8/uT3+Ng8TpNTtI='
   - key: runner_ssh
     name: additional commands
     disabled: false
@@ -207,7 +207,7 @@ settings:
       port: 22
       user: gpctadmin
     argsProtected:
-      passphrase: '#bn_protected#XcWjD4/ScuzOR9QSNhq3HX7pLeeIOPRFJwE9RuZBDmM='
-      password: '#bn_protected#sTm9zcNyO/WEWqWdLPwA6ZbXPk6Ha7ZbTDBnhF6WFgR332DaYLp+zVg='
+      passphrase: 'XcWjD4/ScuzOR9QSNhq3HX7pLeeIOPRFJwE9RuZBDmM='
+      password: 'sTm9zcNyO/WEWqWdLPwA6ZbXPk6Ha7ZbTDBnhF6WFgR332DaYLp+zVg='
   artifacts: []
   variables: []
