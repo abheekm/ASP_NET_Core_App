@@ -17,7 +17,7 @@ settings:
         pwd
         ls
       host: '@{Host}'
-      port: '@{Port}'
+      port: 2222
       user: '@{User}'
     argsProtected:
       passphrase: '@{Passphrase_Custom}'
@@ -35,7 +35,7 @@ settings:
         env | head -5
         which bash
       host: '@{Host}'
-      port: '@{Port}'
+      port: 22
       user: '@{User}'
     argsProtected:
       passphrase: '@{Passphrase_Default}'
@@ -48,7 +48,7 @@ settings:
       authType: password
       commands: "true"
       host: '@{Host}'
-      port: '@{Port}'
+      port: 22
       user: '@{User}'
     argsProtected:
       password: '@{Password}'
