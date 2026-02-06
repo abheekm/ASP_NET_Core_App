@@ -20,8 +20,8 @@ settings:
       port: 2222
       user: '@{User}'
     argsProtected:
-      passphrase: '@{Passphrase_Custom}'
-      password: '@{Password}'
+      passphrase: '@{Passphrase}'
+      password: '@{Password_Custom}'
       sshKey: "-----BEGIN OPENSSH PRIVATE KEY-----\nb3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABDDzgMQKY\noZ2GJj+EgeYal1AAAAGAAAAAEAAAAzAAAAC3NzaC1lZDI1NTE5AAAAIKqTykEQNH9ikJh9\nNssGYgDxbndQBVE4THnLv0itbnMwAAAAoGO01MRBMd/Jx5O/KG+pgyV2SsLjLEP3u/7DM+\nHQA0QTTQRi+erTk4XfP5rbdaHrJJI+FoLM7tpagZ5t1l18iDfchk5gbecciZtCzs++IMCX\nMUop2WSfrXFLU60eZ3GFLh6Vbs9pjhFA2QD9xJ9K8aXgcz/KVHUpdKQocUveuHRLIbzGq1\nvVfYJxqyPSb7xEyEf98uy6HOabL1D/5QTZ7m8=\n-----END OPENSSH PRIVATE KEY-----"
   - key: runner_ssh
     name: env check
@@ -38,8 +38,8 @@ settings:
       port: 22
       user: '@{User}'
     argsProtected:
-      passphrase: '@{Passphrase_Default}'
-      password: '@{Password}'
+      passphrase: '@{Passphrase}'
+      password: '@{Password_Default}'
   - key: runner_ssh
     name: failure check
     disabled: false
@@ -48,7 +48,7 @@ settings:
       authType: password
       commands: "true"
       host: '@{Host}'
-      port: 22
+      port: '@{Port}'
       user: '@{User}'
     argsProtected:
       password: '@{Password}'
@@ -69,17 +69,17 @@ settings:
     exposeAsEnv: false
     isProtected: false
     askEveryTime: false
-  - name: Passphrase_Default
+  - name: Password_Default
     value: 'ABCD'
     exposeAsEnv: false
     isProtected: true
     askEveryTime: false
-  - name: Passphrase_Custom
+  - name: Password_Custom
     value: 'ABC@123'
     exposeAsEnv: false
     isProtected: true
     askEveryTime: false
-  - name: Password
+  - name: Passphrase
     value: 'grapecity@123'
     exposeAsEnv: false
     isProtected: true
