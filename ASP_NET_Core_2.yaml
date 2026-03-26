@@ -1,0 +1,22 @@
+name: ASP_NET_Core
+description: ""
+settings:
+  vcs-steps:
+  - key: vcs_git
+    name: vcs
+    disabled: false
+    args:
+      authType: anonymous
+      branch: master
+      checkoutDir: client
+      url: https://github.com/abheekm/ASP_NET_Core_App.git
+    argsProtected: {}
+  build-steps:
+  - key: runner_configfile
+    name: YML
+    disabled: false
+    workDir: client
+    args:
+      configFile: ASP_NET_Core.yaml
+    argsProtected: {}
+  artifacts: []

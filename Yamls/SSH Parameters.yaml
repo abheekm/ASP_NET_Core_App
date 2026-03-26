@@ -1,0 +1,86 @@
+name: SSH All Auths Linux
+description: ""
+settings:
+  disableCache: false
+  vcs-steps: []
+  build-steps:
+  - key: runner_ssh
+    name: ssh
+    disabled: false
+    workDir: ""
+    args:
+      authType: customSshKey
+      commands: |-
+        whoami
+        hostname
+        uname -a
+        pwd
+        ls
+      host: '@{Host}'
+      port: 2222
+      user: '@{User}'
+    argsProtected:
+      passphrase: '@{Passphrase_Custom}'
+      password: '@{Password}'
+      sshKey: "-----BEGIN OPENSSH PRIVATE KEY-----\nb3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABDDzgMQKY\noZ2GJj+EgeYal1AAAAGAAAAAEAAAAzAAAAC3NzaC1lZDI1NTE5AAAAIKqTykEQNH9ikJh9\nNssGYgDxbndQBVE4THnLv0itbnMwAAAAoGO01MRBMd/Jx5O/KG+pgyV2SsLjLEP3u/7DM+\nHQA0QTTQRi+erTk4XfP5rbdaHrJJI+FoLM7tpagZ5t1l18iDfchk5gbecciZtCzs++IMCX\nMUop2WSfrXFLU60eZ3GFLh6Vbs9pjhFA2QD9xJ9K8aXgcz/KVHUpdKQocUveuHRLIbzGq1\nvVfYJxqyPSb7xEyEf98uy6HOabL1D/5QTZ7m8=\n-----END OPENSSH PRIVATE KEY-----"
+  - key: runner_ssh
+    name: env check
+    disabled: false
+    workDir: ""
+    args:
+      authType: defaultSshKey
+      commands: |-
+        echo $SHELL
+        echo $PATH
+        env | head -5
+        which bash
+      host: '@{Host}'
+      port: 22
+      user: '@{User}'
+    argsProtected:
+      passphrase: '@{Passphrase_Default}'
+      password: '@{Password}'
+  - key: runner_ssh
+    name: failure check
+    disabled: false
+    workDir: ""
+    args:
+      authType: password
+      commands: "true"
+      host: '@{Host}'
+      port: 22
+      user: '@{User}'
+    argsProtected:
+      password: '@{Password}'
+  artifacts: []
+  variables:
+  - name: Host
+    value: 10.64.1.253
+    exposeAsEnv: false
+    isProtected: false
+    askEveryTime: false
+  - name: Port
+    value: "2222"
+    exposeAsEnv: false
+    isProtected: false
+    askEveryTime: false
+  - name: User
+    value: gpctadmin
+    exposeAsEnv: false
+    isProtected: false
+    askEveryTime: false
+  - name: Passphrase_Default
+    value: 'ABCD'
+    exposeAsEnv: false
+    isProtected: true
+    askEveryTime: false
+  - name: Passphrase_Custom
+    value: 'ABC@123'
+    exposeAsEnv: false
+    isProtected: true
+    askEveryTime: false
+  - name: Password
+    value: 'grapecity@123'
+    exposeAsEnv: false
+    isProtected: true
+    askEveryTime: false

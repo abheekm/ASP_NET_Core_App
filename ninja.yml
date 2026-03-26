@@ -1,0 +1,17 @@
+name: ASP_NET_Core_YML
+description: This is ASP_NET_Core_YML sample.
+version: 1.0
+settings:
+  build-steps:
+    - name: Build
+      key: runner_cmd
+      workDir: client
+      disabled: false
+      args:
+        commands: dotnet build ASP_NET_Core_App.sln
+  artifacts:
+    - name: upload artifacts
+      condition: always
+      paths:
+        - client/wwwroot
+        - client/Pages

@@ -1,0 +1,56 @@
+name: SSH All Auths Linux
+description: ""
+settings:
+  disableCache: false
+  vcs-steps: []
+  build-steps:
+  - key: runner_ssh
+    name: ssh
+    disabled: false
+    workDir: ""
+    args:
+      authType: customSshKey
+      commands: |-
+        whoami
+        hostname
+        uname -a
+        pwd
+        ls
+      host: 10.64.1.253
+      port: 2222
+      user: gpctadmin
+    argsProtected:
+      passphrase: 'ABC@123'
+      password: 'grapecity@123'
+      sshKey: "-----BEGIN OPENSSH PRIVATE KEY-----\nb3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABDDzgMQKY\noZ2GJj+EgeYal1AAAAGAAAAAEAAAAzAAAAC3NzaC1lZDI1NTE5AAAAIKqTykEQNH9ikJh9\nNssGYgDxbndQBVE4THnLv0itbnMwAAAAoGO01MRBMd/Jx5O/KG+pgyV2SsLjLEP3u/7DM+\nHQA0QTTQRi+erTk4XfP5rbdaHrJJI+FoLM7tpagZ5t1l18iDfchk5gbecciZtCzs++IMCX\nMUop2WSfrXFLU60eZ3GFLh6Vbs9pjhFA2QD9xJ9K8aXgcz/KVHUpdKQocUveuHRLIbzGq1\nvVfYJxqyPSb7xEyEf98uy6HOabL1D/5QTZ7m8=\n-----END OPENSSH PRIVATE KEY-----"
+  - key: runner_ssh
+    name: env check
+    disabled: false
+    workDir: ""
+    args:
+      authType: defaultSshKey
+      commands: |-
+        echo $SHELL
+        echo $PATH
+        env | head -5
+        which bash
+      host: 10.64.1.253
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      passphrase: 'ABCD'
+      password: 'grapecity@123'
+  - key: runner_ssh
+    name: failure check
+    disabled: false
+    workDir: ""
+    args:
+      authType: password
+      commands: "true"
+      host: 10.64.1.253
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      password: 'grapecity@123'
+  artifacts: []
+  variables: []

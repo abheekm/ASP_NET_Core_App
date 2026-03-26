@@ -1,0 +1,16 @@
+name: Test_ASP_App
+description: ""
+settings:
+  build-steps:
+  - key: runner_cmd
+    name: Test
+    disabled: false
+    workDir: ""
+    args:
+      commands: |-
+        dotnet clean
+        dotnet restore
+        dotnet build
+        dotnet publish
+        dotnet publish -c Release -r win-x64 --self-contained true
+        dotnet pack

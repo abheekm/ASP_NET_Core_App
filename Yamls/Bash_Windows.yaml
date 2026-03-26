@@ -1,0 +1,94 @@
+name: Bash_Windows
+description: ""
+settings:
+  disableCache: false
+  vcs-steps: []
+  build-steps:
+  - key: runner_script
+    name: bash
+    disabled: false
+    workDir: ""
+    args:
+      Shell: bash
+      script: |-
+        #Hello CI
+        echo "CI test: Hello from Windows Bash!"
+
+        #Windows Environment Info
+        echo "=== Windows (Git Bash) Environment ==="
+        echo "User: $(whoami)"
+        echo "OS: $(uname -o)"
+        echo "Kernel: $(uname -r)"
+        echo "Windows Version:"
+        cmd.exe /c ver
+        echo "Current directory: $(pwd)"
+
+        #File I/O on Windows
+        set -e
+
+        echo "Timestamp: $(date)" > win_test.txt
+        cat win_test.txt
+        rm win_test.txt
+
+        #Parallel Tasks
+        task() {
+          echo "Task $1 started"
+          sleep $((RANDOM % 3 + 1))
+          echo "Task $1 done"
+        }
+
+        for i in {1..4}; do
+          task $i &
+        done
+
+        wait
+        echo "All Windows tasks done."
+
+        #Windows Network Test (Git Bash compatible)
+        echo "Pinging google.com ..."
+        ping -n 3 google.com
+
+        #Portable CPU Stress (no Linux timeout)
+        echo "Running CPU test for 5s..."
+
+        end=$((SECONDS + 5))
+        while [ $SECONDS -lt $end ]; do
+          :
+        done
+
+        echo "Done."
+
+        #Windows CI Pipeline Simulation
+        set -e
+
+        echo "Installing dependencies..."
+        sleep 1
+
+        echo "Running tests..."
+        sleep 1
+        echo "test_ui ..... ok"
+        echo "test_api .... ok"
+
+        echo "Building artifact..."
+        echo "windows build artifact" > build_artifact.txt
+        ls -lh build_artifact.txt
+    argsProtected: {}
+  - key: runner_script
+    name: single
+    disabled: false
+    workDir: ""
+    args:
+      Shell: bash
+      script: 'echo "User: $(whoami)"'
+    argsProtected: {}
+  - key: runner_script
+    name: one liner
+    disabled: false
+    workDir: ""
+    args:
+      Shell: bash
+      script: echo "Running CPU test for 5s..."; end=$((SECONDS + 5)); while [ $SECONDS
+        -lt $end ]; do :; done; echo "Done."
+    argsProtected: {}
+  artifacts: []
+  variables: []
