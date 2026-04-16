@@ -7,7 +7,7 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 //Add comment
-//Add comment2
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
