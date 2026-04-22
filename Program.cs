@@ -59,6 +59,7 @@ if (!app.Environment.IsDevelopment())
 //Add comment 44 - saurabh
 //Add comment 45 - saurabh
 //Add comment 46 - saurabh
+//Add comment 47 - saurabh
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
