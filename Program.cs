@@ -46,6 +46,20 @@ if (!app.Environment.IsDevelopment())
 //Add comment 31 - saurabh
 //Add comment 32 - saurabh
 //Add comment 33 - saurabh
+//Add comment 34 - saurabh
+//Add comment 35 - saurabh
+//Add comment 36 - saurabh
+//Add comment 37 - saurabh
+//Add comment 38 - saurabh
+//Add comment 39 - saurabh
+//Add comment 40 - saurabh
+//Add comment 41 - saurabh
+//Add comment 42 - saurabh
+//Add comment 43 - saurabh
+//Add comment 44 - saurabh
+//Add comment 45 - saurabh
+//Add comment 46 - saurabh
+//Add comment 47 - saurabh
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
