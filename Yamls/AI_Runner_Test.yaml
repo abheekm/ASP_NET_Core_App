@@ -2,6 +2,7 @@ name: AI_Runner_Test
 description: ""
 settings:
   disableCache: false
+  vcs-steps: []
   build-steps:
   - key: runner_ai
     name: AI
@@ -14,7 +15,7 @@ settings:
       failPercentage: 50
       modelTier: 1
     argsProtected:
-      appSecret: '0aac46a4ba2d8c6dffe804b55d28323ec0d80250f78702fc83e708347435407f'
+      appSecret: '#bn_protected#CGHQf0gIL8b1uXtsqffYOo/sq7tv0iIQqD/lbOHeuMk693ia7B89fFZyqBRrvaoYDYVhjz2U+/JP/EEqw3tp60EuBDWqk8X2H8N07PoW8Umwrp2mPBgdlEyZ9CY='
   - key: runner_cmd
     name: build
     disabled: false
