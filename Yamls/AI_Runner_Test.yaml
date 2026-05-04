@@ -1,0 +1,33 @@
+name: AI_Runner_Test
+description: ""
+settings:
+  disableCache: false
+  vcs-steps: []
+  build-steps:
+  - key: runner_ai
+    name: AI
+    disabled: false
+    workDir: project
+    args:
+      apiKey: 738a856a-68be-4f74-8e36-a01c3d22282b
+      apiUrl: http://10.64.1.223:3500/api/v1
+      continueOnError: true
+      failPercentage: 50
+      modelTier: 1
+    argsProtected:
+      appSecret: '#bn_protected#CGHQf0gIL8b1uXtsqffYOo/sq7tv0iIQqD/lbOHeuMk693ia7B89fFZyqBRrvaoYDYVhjz2U+/JP/EEqw3tp60EuBDWqk8X2H8N07PoW8Umwrp2mPBgdlEyZ9CY='
+  - key: runner_cmd
+    name: build
+    disabled: false
+    workDir: project
+    args:
+      commands: dotnet build ASP_NET_Core_App.sln
+      continueOnError: false
+      successExitCode: 0
+    argsProtected: {}
+  agentRequirements:
+  - parameterName: env.BN_AGENT_NAME
+    operator: equals
+    value: agent-windows-01
+  artifacts: []
+  variables: []
