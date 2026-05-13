@@ -4,12 +4,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 //check
 
-var app = builder.Build()
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error")
+    app.UseExceptionHandler("/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
@@ -19,8 +19,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthorization()
+app.UseAuthorization();
 
-app.MapRazorPages()
+app.MapRazorPages();
 
-app.Run()
+app.Run();
