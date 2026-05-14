@@ -129,32 +129,7 @@ if (!app.Environment.IsDevelopment())
 //Add comment 114 - saurabh
 //Add comment 115 - saurabh
 //Add comment Abheek
-<<<<<<< HEAD
 //Add comment Abheek2
-=======
-//Add comment 116 - saurabh
-//Add comment 117 - saurabh
-//Add comment 118 - saurabh
-//Add comment 119 - saurabh
-//Add comment 120 - saurabh
-//Add comment 121 - saurabh
-//Add comment 122 - saurabh
-//Add comment 123 - saurabh
-//Add comment 124 - saurabh
-//Add comment 125 - saurabh
-//Add comment 126 - saurabh
-//Add comment 127 - saurabh
-//Add comment 128 - saurabh
-//Add comment 129 - saurabh
-//Add comment 130 - saurabh
-//Add comment 131 - saurabh
-//Add comment 132 - saurabh
-//Add comment 133 - saurabh
-//Add comment 134 - saurabh
-//Add comment 135 - saurabh
-//Add comment 136 - saurabh
-//Add comment 137 - saurabh
->>>>>>> 3f659853c8d1c66ab83e99aa3ecf80e65256a51a
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
