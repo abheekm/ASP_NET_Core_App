@@ -143,13 +143,13 @@ if (!app.Environment.IsDevelopment())
 //Add comment 127 - saurabh
 //Add comment 128 - saurabh
 //Add comment 129 - saurabh
-app.UseHttpsRedirection()
+app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthorization()
+app.UseAuthorization();
 
-app.MapRazorPages()
+app.MapRazorPages();
 
 app.Run();
