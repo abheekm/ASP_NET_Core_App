@@ -1,0 +1,198 @@
+name: SSH New Windows
+description: ""
+settings:
+  disableCache: false
+  vcs-steps: []
+  build-steps:
+  - key: runner_ssh
+    name: Basic command execution
+    disabled: false
+    workDir: ""
+    args:
+      authType: password
+      commands: powershell -NoProfile -NonInteractive -Command "Write-Output 'W1_START';
+        Write-Output ('HOST=' + $env:COMPUTERNAME); Write-Output 'W1_END'"
+      host: 10.64.0.84
+      port: 2222
+      user: gpctadmin
+    argsProtected:
+      password: 'grapecity@123'
+  - key: runner_ssh
+    name: Variables and working directory
+    disabled: false
+    workDir: ""
+    args:
+      authType: password
+      commands: powershell -NoProfile -NonInteractive -Command "$ErrorActionPreference
+        = 'Stop'; $TestValue = 'state-preserved'; $TestDir = Join-Path $env:TEMP ('ssh-runner-'
+        + [guid]::NewGuid().ToString('N')); New-Item -ItemType Directory -Path $TestDir
+        | Out-Null; Set-Location $TestDir; Write-Output ('VALUE=' + $TestValue); Write-Output
+        ('DIRECTORY=' + (Get-Location).Path); if ($TestValue -ne 'state-preserved')
+        { throw 'Variable state check failed' }; if ((Get-Location).Path -ne $TestDir)
+        { throw 'Working directory check failed' }; Set-Location $env:TEMP; Remove-Item
+        -LiteralPath $TestDir -Force; Write-Output 'W2_PASS'"
+      host: 10.64.0.84
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      password: 'grapecity@123'
+  - key: runner_ssh
+    name: Multiline text output
+    disabled: false
+    workDir: ""
+    args:
+      authType: password
+      commands: powershell -NoProfile -NonInteractive -Command "$Text = 'HEREDOC_LINE_1'
+        + [Environment]::NewLine + 'HEREDOC_LINE_2' + [Environment]::NewLine + 'HEREDOC_LINE_3';
+        Write-Output $Text; Write-Output 'W3_PASS'"
+      host: 10.64.0.84
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      password: 'grapecity@123'
+  - key: runner_ssh
+    name: If/else, foreach, and while
+    disabled: false
+    workDir: ""
+    args:
+      authType: password
+      commands: powershell -NoProfile -NonInteractive -Command "$ErrorActionPreference
+        = 'Stop'; $Value = 10; if ($Value -eq 10) { Write-Output 'IF_PASS' } else
+        { Write-Output 'IF_FAIL'; exit 1 }; foreach ($Number in 1..3) { Write-Output
+        ('FOREACH=' + $Number) }; $Counter = 1; while ($Counter -le 3) { Write-Output
+        ('WHILE=' + $Counter); $Counter++ }; Write-Output 'W4_PASS'"
+      host: 10.64.0.84
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      password: 'grapecity@123'
+  - key: runner_ssh
+    name: Script-block scope
+    disabled: false
+    workDir: ""
+    args:
+      authType: password
+      commands: powershell -NoProfile -NonInteractive -Command "$Value = 'parent';
+        & { $Value = 'child'; Write-Output ('INSIDE=' + $Value) }; Write-Output ('OUTSIDE='
+        + $Value); Write-Output 'W5_PASS'"
+      host: 10.64.0.84
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      password: 'grapecity@123'
+  - key: runner_ssh
+    name: Multiline expression equivalent
+    disabled: false
+    workDir: ""
+    args:
+      authType: password
+      commands: powershell -NoProfile -NonInteractive -Command "$Result = 10 + 20
+        + 30; Write-Output ('RESULT=' + $Result); if ($Result -ne 60) { throw 'Expression
+        check failed' }; Write-Output 'W6_PASS'"
+      host: 10.64.0.84
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      password: 'grapecity@123'
+  - key: runner_ssh
+    name: Comments and command execution
+    disabled: false
+    workDir: ""
+    args:
+      authType: password
+      commands: 'powershell -NoProfile -NonInteractive -Command "Write-Output ''W7_START'';
+        Write-Output ''BEFORE_COMMENT''; <# This is an inline comment #>; Write-Output
+        ''AFTER_COMMENT''; Write-Output ''W7_PASS''"'
+      host: 10.64.0.84
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      password: 'grapecity@123'
+  - key: runner_ssh
+    name: Output streaming
+    disabled: false
+    workDir: ""
+    args:
+      authType: password
+      commands: powershell -NoProfile -NonInteractive -Command "Write-Output 'STREAM_1';
+        Start-Sleep -Seconds 5; Write-Output 'STREAM_2'; Start-Sleep -Seconds 5; Write-Output
+        'STREAM_3'; Write-Output 'W8_PASS'"
+      host: 10.64.0.84
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      password: 'grapecity@123'
+  - key: runner_ssh
+    name: Exit-code propagation
+    disabled: true
+    workDir: ""
+    args:
+      authType: password
+      commands: powershell -NoProfile -NonInteractive -Command "Write-Output 'W9_START';
+        exit 23"
+      host: 10.64.0.84
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      password: 'grapecity@123'
+  - key: runner_ssh
+    name: Intentional failure
+    disabled: true
+    workDir: ""
+    args:
+      authType: password
+      commands: powershell -NoProfile -NonInteractive -Command "$ErrorActionPreference
+        = 'Stop'; Write-Output 'W10_START'; throw 'W10_INTENTIONAL_FAILURE'; Write-Output
+        'W10_SHOULD_NOT_APPEAR'"
+      host: 10.64.0.84
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      password: 'grapecity@123'
+  - key: runner_ssh
+    name: Environment variables and working directory
+    disabled: false
+    workDir: ""
+    args:
+      authType: password
+      commands: powershell -NoProfile -NonInteractive -Command "$ErrorActionPreference
+        = 'Stop'; $env:SSH_RUNNER_TEST = 'runner-value'; $OriginalDir = Get-Location;
+        Write-Output ('ENV=' + $env:SSH_RUNNER_TEST); Write-Output ('ORIGINAL_DIR='
+        + $OriginalDir.Path); $TestDir = Join-Path $env:TEMP ('ssh-runner-' + [guid]::NewGuid().ToString('N'));
+        New-Item -ItemType Directory -Path $TestDir | Out-Null; Set-Location $TestDir;
+        Write-Output ('CHANGED_DIR=' + (Get-Location).Path); Set-Location $OriginalDir;
+        Remove-Item -LiteralPath $TestDir -Force; Write-Output 'W11_PASS'"
+      host: 10.64.0.84
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      password: 'grapecity@123'
+  - key: runner_ssh
+    name: Script
+    disabled: false
+    workDir: ""
+    args:
+      authType: password
+      commands: 'powershell -NoProfile -NonInteractive -Command "$ErrorActionPreference
+        = ''Stop''; Write-Output ''TEST_START''; $TestValue = ''state-preserved'';
+        Write-Output (''VARIABLE='' + $TestValue); $OriginalDir = Get-Location; $TestDir
+        = Join-Path $env:TEMP (''ssh-runner-'' + [guid]::NewGuid().ToString(''N''));
+        New-Item -ItemType Directory -Path $TestDir | Out-Null; Set-Location $TestDir;
+        Write-Output (''DIRECTORY='' + (Get-Location).Path); if ($TestValue -ne ''state-preserved'')
+        { throw ''Variable state was not preserved'' }; if ((Get-Location).Path -ne
+        $TestDir) { throw ''Working directory was not preserved'' }; <# This is an
+        inline block comment #>; Write-Output ''COMMENT_TEST_PASS''; Write-Output
+        ''BEFORE_WAIT''; [Console]::Out.Flush(); Start-Sleep -Seconds 5; Write-Output
+        ''AFTER_WAIT''; [Console]::Out.Flush(); Set-Location $OriginalDir; Remove-Item
+        -LiteralPath $TestDir -Force; Write-Output ''TEST_COMPLETE''"'
+      host: 10.64.0.84
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      password: 'grapecity@123'
+  agentRequirements:
+  - parameterName: env.BN_AGENT_NAME
+    operator: equals
+    value: agent-windows-01
+  artifacts: []
+  variables: []

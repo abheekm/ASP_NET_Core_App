@@ -1,0 +1,56 @@
+name: SSH New Linux
+description: ""
+settings:
+  disableCache: false
+  vcs-steps: []
+  build-steps:
+  - key: runner_ssh
+    name: Full-line and inline comments
+    disabled: false
+    workDir: ""
+    args:
+      authType: password
+      commands: |-
+        #!/usr/bin/env bash
+        set -e
+
+        # Full-line comment: this must not execute.
+        VALUE="comments-work"  # Inline comment.
+
+        # Validate that the assignment worked.
+        test "$VALUE" = "comments-work"
+
+        echo "L7_PASS"
+      host: 10.64.1.253
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      password: 'grapecity@123'
+  - key: runner_ssh
+    name: Real-time log streaming
+    disabled: false
+    workDir: ""
+    args:
+      authType: password
+      commands: |-
+        #!/usr/bin/env bash
+        set -e
+
+        echo "LOG_1"
+        sleep 5
+
+        echo "LOG_2"
+        sleep 5
+
+        echo "LOG_3"
+      host: 10.64.1.253
+      port: 22
+      user: gpctadmin
+    argsProtected:
+      password: 'grapecity@123'
+  agentRequirements:
+  - parameterName: env.BN_AGENT_NAME
+    operator: equals
+    value: agent-linux-01
+  artifacts: []
+  variables: []
